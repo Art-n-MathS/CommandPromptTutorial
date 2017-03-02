@@ -158,7 +158,7 @@
 		\par \textbf{C:\textbackslash $>$}
 		\par Please note that for the final command a baskshlash (\textbackslash) is used and not a forward slash (/);
 	
-	318
+
 	\section{Quick Overview of some useful commands}\label{sec:Commands}
 	
 	\par There are numerous commands that can be executed from Command Prompt. Here a number of them are listed.
@@ -167,9 +167,13 @@
 	
 	\par \$:\textbf{ md $<$directoryName$>$}
 	
-	With the command \textbf{rd} (remove directory), we can delete a directory as shown below. For this command, we need to be extremely careful because it does not move it to the bin folder and it also do not ask you whether you are sure to remove it or not. 
+	With the command \textbf{rd} (remove directory), an empty directory can be deleted:
 	
 	\par \$: \textbf{rd $<$directoryName$>$}
+	
+	For non-empty dirctories the tag \textbackslash s should be added at the end as follow:
+	
+	\par \$: \textbf{rd $<$directoryName$>$ \textbackslash s} 
 	
 	\par For renaming a file:
 	
@@ -192,6 +196,11 @@
     
     
     \par \$: \textbf{move $<$file$>$ $<$destination$>$}
+    
+    \par The parameter \textbf{NUL} represents te empty/null. Here, there is a hack for quickly generating an empty text file using the copy command: 
+    \par \$: \textbf{copy NUL emptyFile.txt }
+    
+  
 	
 	\newpage
 	\section{Executing multiple commands using batch (.bat) files}
@@ -200,14 +209,14 @@
     \par Figure \ref{fig:BatchFile} shows an example of a batch file that uses commands explained in this tutorial. Each line that starts with \textbf{::} is a comment, which means that they are ignored at execution time and they do not influence the interpretation of the commands. 
 	
 		\begin{figure}[!htbp]
-			\includegraphics[width=\textwidth]{CommandPrompt.png}
+			\includegraphics[width=\textwidth]{BatCommands.png}
 			\caption{The Command Prompt Window}
 			\label{fig:BatchFile}
 		\end{figure}
 	 
 	\par As mentioned before, batch files are plain text files and they can therefore been edited using a text editor. A good option for editing batch files is the gedit application, which also colours the commands. If gedit is not available, then WordPad will also work fine, but preferably avoid using notepad because notepad fails to identify new lines and editing with it is confusing. 
 	
-	\par To run a batch script file, just double click on the file and the commands will be executed. 
+	\par To run a batch script file, just double click on the file and all the commands will be executed. 
 	
 %	\section{Conclusions}
 %	This is a tutorial for the basics of the Windows command-line interpreter. In this tutorial, we learned how to open the command prompt, execute simple commands and write batch scripts. 
