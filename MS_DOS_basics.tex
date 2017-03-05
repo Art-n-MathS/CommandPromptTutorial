@@ -47,7 +47,7 @@
 			\setcounter{secnumdepth}{0}
 		\section{Introduction}
 		
-	\par This tutorial gives you an overview of the basic line commands that can be executed using the Microsoft Windows  Command Prompt available on windows machines. By following the procedures of this tutorial, you will learn to: 
+	\par This tutorial gives you an overview of the basic line commands that can be executed using the Microsoft Windows  Command Prompt. By following the procedures of this tutorial, you will learn how to: 
 	
 	\begin{enumerate}
 		\item Open Command Prompt on Windows
@@ -60,7 +60,7 @@
 			
 	\section{Opening the Command Prompt window}
 	 
-	 \par The Command Prompt is the command-line interpreter on Windows machines. For example, it allows you to execute line commands for opening or modifying files. For windows 7 and lower, the Command Prompt is found by searching "Command Prompt" on the Star Menu Search bar (Figure \ref{fig:Windows7}). For windows 10, you will find it by pressing right click on the start icon (Figure \ref{fig:Windows10}). Inside the black window that appears, we can write and execute  commands. Figure \ref{fig:CommandPrompt} shows a Command Prompt window. The follow sections give an overview of a few basic commands. 
+	 \par The Command Prompt is the command-line interpreter on Windows machines. For example, it allows you to execute line commands for opening or modifying files. For windows 7 and lower, the Command Prompt is found by searching "Command Prompt" on the Star Menu Search bar (Figure \ref{fig:Windows7}). For windows 10, you will find it by pressing right click on the start icon (Figure \ref{fig:Windows10}). Inside the black window that appears, we can write and execute  commands. Figure \ref{fig:CommandPrompt} shows a Command Prompt window. The last line shows the path of the working directory, which in this case is \textbf{C:\textbackslash Users\textbackslash Milto}.  The follow sections give an overview of a few basic commands. 
 	 
 	 \afterpage{
 	 	 	\begin{figure} [h!]	 		
@@ -90,13 +90,13 @@
 	
 	\newpage \newpage
 	\section{Viewing the contents of a directory  - $<$dir$>$}
-	\par In order to view the content of the current directory we use the command \textbf{dir}. The name of the command \textbf{dir} is derived from the word "directory".  
+	\par In order to view the content of the working directory we use the command \textbf{dir}. The name of the command \textbf{dir} is derived from the word "directory".  
 	
-	\par Type the following at the command prompt and press enter:
+	\par Type the following at the command prompt and press "ENTER" from the keyboard (Please note this in this tutorial the \textbf{\$:} shows the start of a command and it should be ignored.):
 	
 	\par \$: \textbf{dir}
 	 
-	\par A list similar to the following appears:
+	\par Once the "ENTER" is pressed, a list similar to the following appears:
 	
 
 		\setlength{\parindent}{-0.125cm}
@@ -116,32 +116,30 @@
 
 	\setlength{\parindent}{0cm}
 	
-	\par This is the list of all the files and subfiles of the working directory, which is the current directory. The working directory is indicated within Command Prompt. As shown Figure \ref{fig:CommandPrompt} the working directory is \textbf{C:\textbackslash Users\textbackslash Milto } and the above list contains all the files and subdirectories of that directory.
-	
-	\par The  $<$DIR$>$ label indicates that the listed item is a directory itself. If the working directory is not a drive (e.g. \textbf{C:\textbackslash}), the first two directories (\textbf{.} and \textbf{..}) are always listed. The \textbf{.} directory is the current working directory (\textbf{C:\textbackslash Users\textbackslash Milto}) and the \textbf{..} directory is the directory of the folder that contains the working directory (\textbf{C:\textbackslash Users}).
+	\par This is the list of all the files and subfiles of the working directory. The  $<$DIR$>$ label indicates that the listed item is a directory itself. If the working directory is not a drive (e.g. \textbf{C:\textbackslash}), the first two directories (\textbf{.} and \textbf{..}) are always listed. The \textbf{.} directory is the current working directory (\textbf{C:\textbackslash Users\textbackslash Milto}) and the \textbf{..}  is the directory of the folder that contains the working directory (\textbf{C:\textbackslash Users}).
 	
 	\par When a directory contains many items, the tag \textbf{/p} is very useful. For example, type the following command:
 	\par\$:\textbf{ dir /p }
 	
-	\par This will print a page of the directory list and the next page appears once the button \textbf{Enter} is pressed. 
+	\par This will print a page of the directory list and the next page appears once "ENTER" is pressed. 
 	
 		
 	\section{Changing directory - $<$cd$>$}
 	\par Moving from one directory to another is essential and the command \textbf{cd} (named after "change directory") is responsible for that. From the working directory (\textbf{C:\textbackslash Users\textbackslash Milto}), you can move to the subdirectory \textbf{Documents} by typing the following: 
 	\par \$: \textbf{cd Documents}  
 	
-	\par Or you may include the entire path of the directory of interest. For example:
+	\par Or you may include the entire path of a directory. For example:
 	
 	\par \$: \textbf{cd C:\textbackslash Users\textbackslash Milto\textbackslash Documents}  
 	
 	
-	\par By the way, when typing a directory you may use the \textbf{tab} button to quickly fill the name's of directories and files. Try typing:
+	\par By the way, when typing in Command Prompt you may use the \textbf{tab} button to quickly fill the name's of directories and files. Try typing:
 	
 	\par \$: \textbf{cd C:\textbackslash Us}
 	
-	\par and then press tab. It will automatically fill it to \textbf{cd C:\textbackslash Users}. If more than one options apply, we may looping through them by pressing the button \textbf{tab} multiple times. 
+	\par and then press tab. It will automatically be filled to \textbf{cd C:\textbackslash Users}. If more than one options apply, we can looping through them by pressing the button \textbf{tab} multiple times. 
 	
-	\par Additionally, it is essential to be able to move from a working directory to the folder containing that working directory. This is done by the following command:
+	\par Additionally, it is essential to be able to move from a working directory backwards; to the folder containing that working directory. This is done by the following command:
 	
 	\par \$: \textbf{cd ..}
 	
@@ -163,17 +161,17 @@
 	
 	\par There are numerous commands that can be executed from Command Prompt. Here a number of them are listed.
 	
-	\par To create a directory, use the command \textbf{md} (make directory) as follow. Please replace the $<$directoryName$>$ with the name of the new directory to be created. 
+	\par To create a folder, use the command \textbf{md} (make directory) as follow. Please replace the $<$folderName$>$ with the name of the new folder to be created. 
 	
-	\par \$:\textbf{ md $<$directoryName$>$}
+	\par \$:\textbf{ md $<$folderName$>$}
 	
-	With the command \textbf{rd} (remove directory), an empty directory can be deleted:
+	With the command \textbf{rd} (remove directory), an empty folder can be deleted:
 	
-	\par \$: \textbf{rd $<$directoryName$>$}
+	\par \$: \textbf{rd $<$folderName$>$}
 	
-	For non-empty dirctories the tag \textbackslash s should be added at the end as follow:
+	For non-empty folders the tag \textbackslash s should be added at the end as follow:
 	
-	\par \$: \textbf{rd $<$directoryName$>$ \textbackslash s} 
+	\par \$: \textbf{rd $<$folderName$>$ \textbackslash s} 
 	
 	\par For renaming a file:
 	
@@ -187,36 +185,35 @@
 	
 	\par \$: \textbf{copy $<$file$>$ $<$destination$>$}
 	
-	\par For example, the following command will copy the \textbf{file.txt} from the directory \textbf{C:Users} inside the folder \textbf{C:\textbackslash HelloWords}:
+	\par An example of this command is the following which copies the \textbf{file.txt} from the directory \textbf{C:Users} into the \textbf{C:\textbackslash HelloWords}:
 	
 	\par \$: 	\textbf{copy\space\space c:\textbackslash Users\textbackslash file.txt \space c:\textbackslash HelloWorld 
 	 }
 	 
-    \par Similarly the command for moving a file is the following:
+    \par Similarly the structure of the command that moves files is the following:
     
     
     \par \$: \textbf{move $<$file$>$ $<$destination$>$}
     
-    \par The parameter \textbf{NUL} represents te empty/null. Here, there is a hack for quickly generating an empty text file using the copy command: 
+    \par The parameter \textbf{NUL} represents emptiness/null. Here, there is a hack for quickly generating an empty text file using the \textbf{copy} command and \textbf{NUL}: 
     \par \$: \textbf{copy NUL emptyFile.txt }
     
   
 	
 	\newpage
 	\section{Executing multiple commands using batch (.bat) files}
-	\par A batch file is a script file in Microsoft Windows. It consists of a series of commands, which are stored in a plain text file (most commonly with extension .bat). These commands can be executed by the command-line interpreter (Command Prompt).
-    
-    \par Figure \ref{fig:BatchFile} shows an example of a batch file that uses commands explained in this tutorial. Each line that starts with \textbf{::} is a comment, which means that they are ignored at execution time and they do not influence the interpretation of the commands. 
+	\par A batch file is a script file in Microsoft Windows. It consists of a series of commands, which are stored in a plain text file (most commonly with extension .bat). These commands can be executed by the command-line interpreter (Command Prompt). Figure \ref{fig:BatchFile} shows an example of a batch file that uses commands explained in this tutorial. Each line that starts with \textbf{::} is a comment and it is ignored at execution time. Comments also do not influence the interpretation of the commands. 
 	
 		\begin{figure}[!htbp]
-			\includegraphics[width=\textwidth]{BatCommands.png}
+			\centering
+			\includegraphics[width=0.98\textwidth]{BatCommands.png}
 			\caption{The Command Prompt Window}
 			\label{fig:BatchFile}
 		\end{figure}
 	 
-	\par As mentioned before, batch files are plain text files and they can therefore been edited using a text editor. A good option for editing batch files is the gedit application, which also colours the commands. If gedit is not available, then WordPad will also work fine, but preferably avoid using notepad because notepad fails to identify new lines and editing with it is confusing. 
+	\par As mentioned before, batch files are plain text files and they can therefore been edited using a text editor. A good option for editing batch files is the \textbf{gedit} application, which colours the commands. If \textbf{gedit} is not available, then \textbf{WordPad} will also work fine, but preferably avoid using \textbf{Notepad} because usually it does not identify new lines and there is no indentation. 
 	
-	\par To run a batch script file, just double click on the file and all the commands will be executed. 
+	\par To run a batch script file, just double click on the file and all the commands will be executed. Once the execution is done, the command prompt closes automatically. To avoid that you may include the \textbf{pause} command at the end of the file. 
 	
 %	\section{Conclusions}
 %	This is a tutorial for the basics of the Windows command-line interpreter. In this tutorial, we learned how to open the command prompt, execute simple commands and write batch scripts. 
